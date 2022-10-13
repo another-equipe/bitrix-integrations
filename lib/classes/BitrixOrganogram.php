@@ -56,4 +56,22 @@ class BitrixOrganogram {
 
         return $response["result"];
     }
+
+    /**
+     * Designa um novo pai para um departamento
+     * @param int $dep_id ID do departamento
+     * @param int $parent_dep_id ID do departamento a ser o pai
+    */
+    public function update_parent(int $dep_id, int $parent_dep_id): ?array{
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, "https://savecash.bitrix24.com.br/rest/5/0m040o9i0y2m8g3b/department.update.json?ID=$dep_id&PARENT=$parent_dep_id");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+
+        $response = json_decode(curl_exec($curl), true);
+        curl_close($curl);
+
+        return $response;
+    }
 }

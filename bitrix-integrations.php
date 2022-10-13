@@ -3,12 +3,12 @@
 /**
  * Bitrix Integrations
  *
- * @since             1.0.0
+ * @since             2.0.0
  * @wordpress-plugin
  * Plugin Name:       Bitrix Integrations
  * Plugin URI:        
  * Description:       Plugin que faz a integração entre o SIGA e o Bitrix
- * Version:           1.0.0
+ * Version:           2.0.0
  * Author:            Another Equipe
  * Author URI:        https://another-equipe.savecash.tech/
  * Text Domain:       bitrix-integrations
